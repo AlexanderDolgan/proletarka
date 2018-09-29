@@ -1,0 +1,32 @@
+/*
+Theme Name: grossmetall
+Author: Alexander Dolgan
+Author URI:
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic');
+
+@import "../../bower_components/slick-master/slick/slick.scss";
+@import "../../bower_components/slick-master/slick/slick-theme.scss";
+
+//settings-var
+@import "util/settings";
+@import "util/mixin";
+@import "util/function";
+//sprites
+@import "util/sprite";
+
+//base
+@import "base/base";
+
+//layout
+@import "layout/index";
+
+//modules
+@import "modules/index";
+
+//states
+@import "states/index";
+

@@ -1,0 +1,158 @@
+.hero {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 2rem;
+	background-color: ac(black);
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.hero .hero-darkframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.6);
+	height: 100%;
+	width: 100%;
+}
+
+.hero .hero-text {
+	color: ac(white);
+	display: inline-block;
+	& .curly-brace {
+		& .brace {
+			position: relative;
+			width: 100%;
+			margin-top: 4rem;
+		}
+		& .brace::before {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			left: 0;
+			border-top: solid 1px white;
+			border-top-right-radius: 15px;
+		}
+		& .brace::after {
+			content: '';
+			position: absolute;
+			display: block;
+			height: 10px;
+			width: 50%;
+			right: 0rem;
+			border-top: solid 1px white;
+			border-top-left-radius: 15px;
+		}
+	}
+}
+
+.hero .work-time {
+	position: absolute;
+	bottom: 2rem;
+	left: 2rem;
+	& ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		& li {
+			color: ac(white);
+			display: inline-block;
+			font-family: $second-font-family;
+			font-weight: 500;
+			font-size: 1.5rem;
+			&:first-child {
+				margin-right: 2rem;
+			}
+		}
+	}
+}
+
+.hero .social {
+	display: none;
+}
+
+@media (min-width: $b-medium) {
+	.hero {
+		background-attachment: fixed;	
+	}
+	
+	.hero .hero-text {
+		margin-left: 8rem;
+	}
+
+	.hero .work-time {
+		right: 2rem;
+		left: auto;
+	}
+
+	.hero .social {
+		display: block;
+		position: absolute;
+		bottom: 2rem;
+		left: 2rem;
+		& ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			font-size: 0;
+			& li {
+				display: inline-block;
+				&:first-child {
+					margin-right: 2rem;
+				}
+			}
+		}
+		& .ic-fb {		
+			display: block;
+			@include retina-sprite($ic-facebook-w-group);
+			margin: 0 auto;
+		}
+		& .ic-in {
+			display: block;
+			@include retina-sprite($ic-instagram-w-group);
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.hero .hero-text {
+		margin-left: 16rem;
+	}
+
+	.hero .social {
+		bottom: 8rem;
+		left: 8rem;
+	}
+
+	.hero .work-time {
+		right: 8rem;
+		bottom: 8rem;
+		left: auto;
+	}
+}
+
+
+@media (min-width: $b-xxlarge) {
+	.hero .hero-text {
+		margin-left: 30rem;
+	}
+
+	.hero .social {
+		bottom: 10rem;
+		left: 10rem;
+	}
+
+	.hero .work-time {
+		right: 10rem;
+		bottom: 10rem;
+		left: auto;
+	}
+}
